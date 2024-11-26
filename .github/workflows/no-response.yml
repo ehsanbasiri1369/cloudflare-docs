@@ -1,6 +1,6 @@
-name: No Response
+name
 
-# Both `issue_comment` and `scheduled` event types are required for this Action
+# Both `issue_comment` and `scheduled` event types are required for this ActiNode.json
 # to work properly.
 
 # This action helps us flag issues for more information.
