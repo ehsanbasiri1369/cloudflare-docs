@@ -22,7 +22,7 @@ The `cache.put` method is not compatible with tiered caching. Refer to [Cache AP
 
 Workers deployed to custom domains have access to functional `cache` operations. So do [Pages functions](/pages/functions/), whether attached to custom domains or `*.pages.dev` domains.
 
-However, any Cache API operations in the Cloudflare Workers dashboard editor, [Playground](/workers/playground/) previews, and any `*.workers.dev` deployments will have no impact. For Workers fronted by [Cloudflare Access](https://www.cloudflare.com/teams/access/), the Cache API is not currently available.
+However, any Cache API operations in the Cloudflare Workers dashboard editor and [Playground](/workers/playground/) previews will have no impact. For Workers fronted by [Cloudflare Access](https://www.cloudflare.com/teams/access/), the Cache API is not currently available.
 
 :::note
 
@@ -61,7 +61,7 @@ Our implementation of the Cache API respects the following HTTP headers on the r
 * `Cache-Control`
   * Controls caching directives. This is consistent with [Cloudflare Cache-Control Directives](/cache/concepts/cache-control#cache-control-directives). Refer to [Edge TTL](/cache/how-to/configure-cache-status-code#edge-ttl) for a list of HTTP response codes and their TTL when `Cache-Control` directives are not present.
 * `Cache-Tag`
-  * Allows resource purging by tag(s) later (Enterprise only).
+  * Allows resource purging by tag(s) later.
 * `ETag`
   * Allows `cache.match()` to evaluate conditional requests with `If-None-Match`.
 * `Expires` string
